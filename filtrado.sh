@@ -1,4 +1,4 @@
-dcat file.html | grep -E "num-votes|\"command\"" >> result.html
+cat file.html | grep -E "num-votes|\"command\"" >> result.html
 
 cat result.html | awk -F">|</div>" '{print $2}' >> data.txt
 
